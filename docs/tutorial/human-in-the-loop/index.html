@@ -14,7 +14,7 @@
 <script>!function(e,t,n,c,s,a,r){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)},(a=t.createElement(c)).async=1,a.src="https://www.clarity.ms/tag/lnxpe6skj1",(r=t.getElementsByTagName(c)[0]).parentNode.insertBefore(a,r)}(window,document,"clarity","script")</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
 <script src="/autogen/js/custom.js" async defer="defer"></script><link rel="stylesheet" href="/autogen/assets/css/styles.d8ef5d37.css">
-<script src="/autogen/assets/js/runtime~main.a1a4f0e5.js" defer="defer"></script>
+<script src="/autogen/assets/js/runtime~main.e41a91ee.js" defer="defer"></script>
 <script src="/autogen/assets/js/main.8e1e500e.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -29,7 +29,7 @@ showed how to properly terminate a conversation between agents.</p>
 agents. For example, to allow human feedback to steer agents in the
 right direction, specify goals, etc. In this chapter, we will show how
 AutoGen supports human intervention.</p>
-<p>In AutoGen’s <code>ConversableAgent</code>, the human-the-loop component sits in
+<p>In AutoGen’s <code>ConversableAgent</code>, the human-in-the-loop component sits in
 front of the auto-reply components. It can intercept the incoming
 messages and decide whether to pass them to the auto-reply components or
 to provide human feedback. The figure below illustrates the design.</p>
@@ -84,10 +84,10 @@ was not very good at guessing the number… but hey the agent was nice
 enough to give out the number in the end.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="human-input-mode-terminate">Human Input Mode = <code>TERMINATE</code><a href="#human-input-mode-terminate" class="hash-link" aria-label="Direct link to human-input-mode-terminate" title="Direct link to human-input-mode-terminate">​</a></h2>
 <p>In this mode, human input is only requested when a termination condition
-is met. <strong>If the human choose to intercept and reply, the counter will
-be reset</strong>; if the human choose to skip, automatic reply mechanism will
-be used; if the human choose to terminate, the conversation will be
-terminated.</p>
+is met. <strong>If the human chooses to intercept and reply, the counter will
+be reset</strong>; if the human chooses to skip, the automatic reply mechanism
+will be used; if the human chooses to terminate, the conversation will
+be terminated.</p>
 <p>Let us see this mode in action by playing the same game again, but this
 time the guessing agent will only have two chances to guess the number,
 and if it fails, the human will be asked to provide feedback, and the
