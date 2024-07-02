@@ -29,7 +29,19 @@ An agent entity declaratively specifies properties for an AutoGen agent (mirrors
 
 Once agents have been created, existing models or skills can be _added_ to the agent.
 
-![AutoGen Studio Add skills and models to agent](./img/agent_skillsmodel.png)
+![AutoGen Studio Add skills and models to agent](./img/agent_skillsmodel.png).
+
+#### Group Chat Agent
+
+AutoGen provides a GroupChat Manager and GroupChat class as a container for specifying groups of agents that collaborate on a task. In AutoGen Studio, this functionality is wrapped into a Group Chat Agent that you can create as follows:
+
+- Agents -> New Agent -> Group Chat
+- Specify name, description and other properties and click create
+- On the Agents tab, you can now add any existing agents to the Group Chat agent. If you expect code execution within the Group Chat, ensure that you add at least one agent with this capability (usually a user proxy).
+- Add a model to the Group Chat agent (this is used for tasks such as determining the next speaker etc)
+- Optionally any skills to the Group Chat agent.
+
+Once your Group Chat agent has been created, you can then use it in a workflow e.g., create an autonomous chat workflow, add a User Proxy agent as the initiator and the Group Chat agent as the receiver.
 
 ### Workflows
 
