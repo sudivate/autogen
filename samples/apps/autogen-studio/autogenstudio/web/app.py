@@ -1,3 +1,4 @@
+from autogen import ConversableAgent, UserProxyAgent, config_list_from_json
 import asyncio
 import os
 import queue
@@ -18,6 +19,16 @@ from ..database.dbmanager import DBManager
 from ..datamodel import Agent, Message, Model, Response, Session, Skill, Workflow
 from ..utils import check_and_cast_datetime_fields, init_app_folders, md5_hash, test_model
 from ..version import VERSION
+
+from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
+from opentelemetry import trace
+from azure.monitor.opentelemetry.exporter import AzureMonitorTraceExporter
+from opentelemetry.sdk.trace import TracerProvider
+from opentelemetry.sdk.trace.export import BatchSpanProcessor
+import json
+import autogen.runtime_logging
+
+autogen.runtime_logging.start(logger_type="otel", config={})
 
 managers = {"chat": None}  # manage calls to autogen
 # Create thread-safe queue for messages between api thread and autogen threads
@@ -43,7 +54,8 @@ def message_handler():
                 logger.info(
                     f"Sending message to connection_id: {message['connection_id']}. Connection ID: {socket_client_id}"
                 )
-                asyncio.run(websocket_manager.send_message(message, connection))
+                asyncio.run(websocket_manager.send_message(
+                    message, connection))
             else:
                 logger.info(
                     f"Skipping message for connection_id: {message['connection_id']}. Connection ID: {socket_client_id}"
@@ -76,7 +88,6 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
-
 
 # allow cross origin requests for testing on localhost:800* ports only
 app.add_middleware(
@@ -366,6 +377,7 @@ async def list_messages(user_id: str, session_id: int):
     return list_entity(Message, filters=filters, order="asc", return_json=True)
 
 
+# @tracer.start_as_current_span("workflow_run")
 @api.post("/sessions/{session_id}/workflow/{workflow_id}/run")
 async def run_session_workflow(message: Message, session_id: int, workflow_id: int):
     """Runs a workflow on provided message"""
@@ -373,7 +385,8 @@ async def run_session_workflow(message: Message, session_id: int, workflow_id: i
         user_message_history = (
             dbmanager.get(
                 Message,
-                filters={"user_id": message.user_id, "session_id": message.session_id},
+                filters={"user_id": message.user_id,
+                         "session_id": message.session_id},
                 return_json=True,
             ).data
             if session_id is not None
@@ -381,18 +394,30 @@ async def run_session_workflow(message: Message, session_id: int, workflow_id: i
         )
         # save incoming message
         dbmanager.upsert(message)
-        user_dir = os.path.join(folders["files_static_root"], "user", md5_hash(message.user_id))
+        user_dir = os.path.join(
+            folders["files_static_root"], "user", md5_hash(message.user_id))
         os.makedirs(user_dir, exist_ok=True)
-        workflow = workflow_from_id(workflow_id, dbmanager=dbmanager)
-        agent_response: Message = managers["chat"].chat(
-            message=message,
-            history=user_message_history,
-            user_dir=user_dir,
-            workflow=workflow,
-            connection_id=message.connection_id,
-        )
+        with autogen.runtime_logging.autogen_logger.tracer.start_as_current_span(
+                "workflow_run") as current_span:
+            workflow = workflow_from_id(workflow_id, dbmanager=dbmanager)
+            agent_response: Message = managers["chat"].chat(
+                message=message,
+                history=user_message_history,
+                user_dir=user_dir,
+                workflow=workflow,
+                connection_id=message.connection_id,
+            )
 
-        response: Response = dbmanager.upsert(agent_response)
+            response: Response = dbmanager.upsert(agent_response)
+
+            current_span.set_attribute("user_id", message.user_id)
+            current_span.set_attribute("session_id", message.session_id)
+            current_span.set_attribute("workflow_id", workflow_id)
+            current_span.set_attribute("connection_id", message.connection_id)
+            json_dict = response.model_dump(mode="json")
+            current_span.set_attribute(
+                "messages", json.dumps(json.loads(json_dict["data"]["meta"])))
+
         return response.model_dump(mode="json")
     except Exception as ex_error:
         print(traceback.format_exc())
@@ -402,7 +427,7 @@ async def run_session_workflow(message: Message, session_id: int, workflow_id: i
         }
 
 
-@api.get("/version")
+@ api.get("/version")
 async def get_version():
     return {
         "status": True,
@@ -429,7 +454,7 @@ async def process_socket_message(data: dict, websocket: WebSocket, client_id: st
         await websocket_manager.send_message(response_socket_message, websocket)
 
 
-@api.websocket("/ws/{client_id}")
+@ api.websocket("/ws/{client_id}")
 async def websocket_endpoint(websocket: WebSocket, client_id: str):
     await websocket_manager.connect(websocket, client_id)
     try:
