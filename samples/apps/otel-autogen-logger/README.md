@@ -7,7 +7,7 @@ This example demonstrates how to use the OpenTelemetry SDK to instrument Autogen
 
 | Instrumentation | Description |
 |-----------------|-------------|
-| [Auto Studio and SDK ](./../../../autogen/logger/otel_logger.py) | Added new logger to core Autogen SDK. This will enable `autogen.runtime_logging.start(logger_type="otel", config={})`(TODO: Create UpStream PR)   |
+| [AutoGen Studio and SDK ](./../../../autogen/logger/otel_logger.py) | Added new logger to core Autogen SDK. This will enable `autogen.runtime_logging.start(logger_type="otel", config={})`(TODO: Create UpStream PR)   |
 | [OTel Logger](./otel_logger.py) | Overriding Baselogger by implementing BaseLogger abstraction. This can be used without the upstream changes to AutoGen SDK |
 
 ## Demo Prerequisites
