@@ -136,6 +136,9 @@ class OtelLogger(BaseLogger):
                     "end_time": get_current_ts(),
                     "thread_id": thread_id,
                     "source_name": source_name,
+                    "prompt_tokens": response.usage.prompt_tokens,
+                    "completion_tokens": response.usage.completion_tokens,
+                    "total_tokens": response.usage.total_tokens,
                 }
             )
             self.logger.info(log_data)

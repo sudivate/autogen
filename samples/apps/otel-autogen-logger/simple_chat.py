@@ -1,6 +1,8 @@
 from autogen import ConversableAgent, UserProxyAgent, config_list_from_json
 import autogen.runtime_logging
 from otel_logger import OtelLogger
+from dotenv import load_dotenv
+import os
 
 
 def main():
@@ -11,17 +13,34 @@ def main():
 
     # Intialize the Autogen logger
     autogen.runtime_logging.start(logger=OtelLogger())
-    config_list = config_list_from_json(env_or_file="./OAI_CONFIG_LIST.json")
 
-    # Create the agent that uses the LLM.
-    assistant = ConversableAgent(
-        "agent", llm_config={"config_list": config_list})
+    load_dotenv()
+    AGENTOPS_API_KEY = os.getenv("AGENTOPS_API_KEY")
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-    # Create the agent that represents the user in the conversation.
-    user_proxy = UserProxyAgent("user", code_execution_config=False)
+    # config_list = config_list_from_json(env_or_file="./OAI_CONFIG_LIST.json")
+    config_list = [{
+        "model": "gpt-4",
+        "api_type": "azure",
+        "api_key": OPENAI_API_KEY,
+        "base_url": "https://observability-spikes-oai.openai.azure.com/",
+        "api_version": "2024-02-01"
+    }]
 
-    # Let the assistant start the conversation.  It will end when the user types exit.
-    assistant.initiate_chat(user_proxy, message="How can I help you today?")
+    # config_list = config_list_from_json(env_or_file="./OAI_CONFIG_LIST.json")
+
+    with autogen.runtime_logging.autogen_logger.tracer.start_as_current_span(
+            "workflow_run") as current_span:
+        # Create the agent that uses the LLM.
+        assistant = ConversableAgent(
+            "agent", llm_config={"config_list": config_list})
+
+        # Create the agent that represents the user in the conversation.
+        user_proxy = UserProxyAgent("user", code_execution_config=False)
+
+        # Let the assistant start the conversation.  It will end when the user types exit.
+        assistant.initiate_chat(
+            user_proxy, message="How can I help you today?")
 
     autogen.runtime_logging.stop()
 

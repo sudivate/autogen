@@ -4,3 +4,5 @@ opentelemetry-instrumentation
 azure-monitor-opentelemetry
 azure-monitor-opentelemetry-exporter
 opentelemetry-instrumentation-fastapi
+agentops
+python-dotenv
