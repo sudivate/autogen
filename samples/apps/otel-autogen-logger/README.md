@@ -1,4 +1,4 @@
-# Monittoring Autogen Application with Azure Monitor and OpenTelemetry
+# Monitoring Autogen Application with Azure Monitor and OpenTelemetry
 
 This example demonstrates how to use the OpenTelemetry SDK to instrument Autogen application and send telemetry data to Azure Monitor.
 
