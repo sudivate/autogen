@@ -3,6 +3,7 @@ import autogen.runtime_logging
 from otel_logger import OtelLogger
 from dotenv import load_dotenv
 import os
+import json
 
 
 def main():
@@ -39,8 +40,10 @@ def main():
         user_proxy = UserProxyAgent("user", code_execution_config=False)
 
         # Let the assistant start the conversation.  It will end when the user types exit.
-        assistant.initiate_chat(
+        response = assistant.initiate_chat(
             user_proxy, message="How can I help you today?")
+        current_span.set_attribute(
+            "messages", json.dumps(response.chat_history))
 
     autogen.runtime_logging.stop()
 

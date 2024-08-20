@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from datetime import datetime
 import json
 import logging
 import os
@@ -139,6 +140,22 @@ class OtelLogger(BaseLogger):
 
                 }
             )
+            start_time_stamp = datetime.strptime(
+                start_time, "%Y-%m-%d %H:%M:%S.%f")
+            end_time_stamp = datetime.strptime(
+                get_current_ts(), "%Y-%m-%d %H:%M:%S.%f")
+
+            with self.tracer.start_as_current_span("llm_span", start_time=int(start_time_stamp.timestamp() * 1e9)) as current_span:
+                current_span.set_attribute("data", log_data)
+                current_span.set_attribute("cost", cost)
+                current_span.set_attribute("source_name", source_name)
+                current_span.set_attribute(
+                    "prompt_tokens", response.usage.prompt_tokens)
+                current_span.set_attribute(
+                    "completion_tokens", response.usage.completion_tokens)
+                current_span.set_attribute(
+                    "total_tokens", response.usage.total_tokens)
+                current_span.end(int(end_time_stamp.timestamp() * 1e9))
 
             self.logger.info(log_data)
         except Exception as e:
@@ -198,6 +215,13 @@ class OtelLogger(BaseLogger):
                         "thread_id": thread_id,
                     }
                 )
+
+                with self.tracer.start_as_current_span("event_span") as current_span:
+                    current_span.set_attribute("source_name", source.name)
+                    current_span.set_attribute("event_name", name)
+                    current_span.set_attribute("data", log_data)
+                    current_span.end()
+
                 self.logger.info(log_data)
             except Exception as e:
                 self.logger.error(f"[otel_logger] Failed to log event {e}")
@@ -294,6 +318,11 @@ class OtelLogger(BaseLogger):
                     "returns": safe_serialize(returns),
                 }
             )
+            with self.tracer.start_as_current_span("function_span") as current_span:
+                current_span.set_attribute("source_name", str(
+                    source.name) if hasattr(source, "name") else source)
+                current_span.set_attribute("data", log_data)
+                current_span.end()
             self.logger.info(log_data)
         except Exception as e:
             self.logger.error(f"[otel_logger] Failed to log function use {e}")

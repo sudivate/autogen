@@ -71,4 +71,12 @@ This demo demonstrates how to use the AutoGen Logger with AutoGen Python SDK to 
 
 AutoGen insights is streamlined with AgentOps, offering real-time visibility into agent performance and interactions. Easily track metrics such as execution times, costs, and error rates across sessions. The dashboard provides detailed logs and visualizations, helping identify bottlenecks and optimize workflows. This ensures that your AI agents operate efficiently and reliably at scale.
 
+## Import Autogen Insights Workbook
+
+- Open the Azure Portal and navigate to the Azure App Insights
+- Click on the Workbooks and click on the `+ New` button
+- Click on `<>` advanced editor and paste the content of the [autogen-insights.json](./autogen-insights.json) file and click on `Apply`
+- You should see the Autogen Insights Workbook in the Azure Monitor
+
+
 ![AutoGen Insights Workbook](./images/autogen_insights.gif)
