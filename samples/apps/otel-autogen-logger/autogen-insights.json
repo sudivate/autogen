@@ -1,726 +1,739 @@
 {
-    "version": "Notebook/1.0",
-    "items": [
-      {
-        "type": 1,
-        "content": {
-          "json": "# AutoGen Insights\r\n\r\n### AutoGen insights is streamlined with AgentOps, offering real-time visibility into agent performance and interactions. Easily track metrics such as execution times, costs, and error rates across sessions. The dashboard provides detailed logs and visualizations, helping identify bottlenecks and optimize workflows. This ensures that your AI agents operate efficiently and reliably at scale."
-        },
-        "name": "text - 4"
+  "version": "Notebook/1.0",
+  "items": [
+    {
+      "type": 1,
+      "content": {
+        "json": "# AutoGen Insights\r\n\r\n### AutoGen insights is streamlined with AgentOps, offering real-time visibility into agent performance and interactions. Easily track metrics such as execution times, costs, and error rates across sessions. The dashboard provides detailed logs and visualizations, helping identify bottlenecks and optimize workflows. This ensures that your AI agents operate efficiently and reliably at scale."
       },
-      {
-        "type": 9,
-        "content": {
-          "version": "KqlParameterItem/1.0",
-          "parameters": [
-            {
-              "id": "fe04b060-a336-4f44-882a-f73613825d3a",
-              "version": "KqlParameterItem/1.0",
-              "name": "Duration",
-              "type": 4,
-              "isRequired": true,
-              "isGlobal": true,
-              "typeSettings": {
-                "selectableValues": [
-                  {
-                    "durationMs": 300000
-                  },
-                  {
-                    "durationMs": 900000
-                  },
-                  {
-                    "durationMs": 1800000
-                  },
-                  {
-                    "durationMs": 3600000
-                  },
-                  {
-                    "durationMs": 14400000
-                  },
-                  {
-                    "durationMs": 43200000
-                  },
-                  {
-                    "durationMs": 86400000
-                  },
-                  {
-                    "durationMs": 172800000
-                  },
-                  {
-                    "durationMs": 259200000
-                  },
-                  {
-                    "durationMs": 604800000
-                  },
-                  {
-                    "durationMs": 1209600000
-                  },
-                  {
-                    "durationMs": 2419200000
-                  },
-                  {
-                    "durationMs": 2592000000
-                  },
-                  {
-                    "durationMs": 5184000000
-                  },
-                  {
-                    "durationMs": 7776000000
-                  }
-                ],
-                "allowCustom": true
-              },
-              "timeContext": {
-                "durationMs": 86400000
-              },
-              "value": {
-                "durationMs": 1800000
-              }
+      "name": "text - 4"
+    },
+    {
+      "type": 9,
+      "content": {
+        "version": "KqlParameterItem/1.0",
+        "parameters": [
+          {
+            "id": "fe04b060-a336-4f44-882a-f73613825d3a",
+            "version": "KqlParameterItem/1.0",
+            "name": "Duration",
+            "type": 4,
+            "isRequired": true,
+            "isGlobal": true,
+            "typeSettings": {
+              "selectableValues": [
+                {
+                  "durationMs": 300000
+                },
+                {
+                  "durationMs": 900000
+                },
+                {
+                  "durationMs": 1800000
+                },
+                {
+                  "durationMs": 3600000
+                },
+                {
+                  "durationMs": 14400000
+                },
+                {
+                  "durationMs": 43200000
+                },
+                {
+                  "durationMs": 86400000
+                },
+                {
+                  "durationMs": 172800000
+                },
+                {
+                  "durationMs": 259200000
+                },
+                {
+                  "durationMs": 604800000
+                },
+                {
+                  "durationMs": 1209600000
+                },
+                {
+                  "durationMs": 2419200000
+                },
+                {
+                  "durationMs": 2592000000
+                },
+                {
+                  "durationMs": 5184000000
+                },
+                {
+                  "durationMs": 7776000000
+                }
+              ],
+              "allowCustom": true
+            },
+            "timeContext": {
+              "durationMs": 86400000
+            },
+            "value": {
+              "durationMs": 172800000
             }
-          ],
-          "style": "pills",
-          "queryType": 0,
-          "resourceType": "microsoft.insights/components"
-        },
-        "name": "parameters - 3"
+          }
+        ],
+        "style": "pills",
+        "queryType": 0,
+        "resourceType": "microsoft.insights/components"
       },
-      {
-        "type": 11,
-        "content": {
-          "version": "LinkItem/1.0",
-          "style": "tabs",
-          "tabStyle": "bigger",
-          "links": [
-            {
-              "id": "e87fda11-f869-446a-abef-93700451ec07",
-              "cellValue": "page",
-              "linkTarget": "parameter",
-              "linkLabel": "Overview",
-              "subTarget": "overview",
-              "style": "link",
-              "tabWidth": "'200px'"
-            },
-            {
-              "id": "c8318a81-a292-44c0-85bf-ee84a2b5ba1e",
-              "cellValue": "page",
-              "linkTarget": "parameter",
-              "linkLabel": "Session Drill",
-              "subTarget": "session",
-              "style": "link",
-              "tabWidth": "'200px'"
-            }
-          ]
-        },
-        "name": "links - 5"
+      "name": "parameters - 3"
+    },
+    {
+      "type": 11,
+      "content": {
+        "version": "LinkItem/1.0",
+        "style": "tabs",
+        "tabStyle": "bigger",
+        "links": [
+          {
+            "id": "e87fda11-f869-446a-abef-93700451ec07",
+            "cellValue": "page",
+            "linkTarget": "parameter",
+            "linkLabel": "Overview",
+            "subTarget": "overview",
+            "style": "link",
+            "tabWidth": "'200px'"
+          },
+          {
+            "id": "c8318a81-a292-44c0-85bf-ee84a2b5ba1e",
+            "cellValue": "page",
+            "linkTarget": "parameter",
+            "linkLabel": "Session Drill",
+            "subTarget": "session",
+            "style": "link",
+            "tabWidth": "'200px'"
+          }
+        ]
       },
-      {
-        "type": 12,
-        "content": {
-          "version": "NotebookGroup/1.0",
-          "groupType": "editable",
-          "items": [
-            {
-              "type": 12,
-              "content": {
-                "version": "NotebookGroup/1.0",
-                "groupType": "editable",
-                "items": [
-                  {
-                    "type": 3,
-                    "content": {
-                      "version": "KqlItem/1.0",
-                      "query": "traces\r\n| where customDimensions.[\"code.function\"] ==\"log_chat_completion\"\r\n| extend parsedMessage = parse_json(message)\r\n| project\r\n    prompt_tokens = toint(parsedMessage.prompt_tokens),\r\n    completion_tokens = toint(parsedMessage.completion_tokens),\r\n    total_tokens = toint(parsedMessage.total_tokens)\r\n| summarize\r\n    prompt_tokens = sum(prompt_tokens),\r\n    completion_tokens = sum(completion_tokens),\r\n    total_tokens = sum(total_tokens)",
-                      "size": 1,
-                      "timeContextFromParameter": "Duration",
-                      "queryType": 0,
-                      "resourceType": "microsoft.insights/components",
-                      "visualization": "stat",
-                      "tileSettings": {
-                        "titleContent": {
-                          "columnMatch": "total_tokens",
-                          "formatter": 1
-                        },
-                        "leftContent": {
-                          "columnMatch": "prompt_tokens",
-                          "formatter": 1
-                        },
-                        "rightContent": {
-                          "columnMatch": "completion_tokens",
-                          "formatter": 1
-                        },
-                        "showBorder": false
-                      },
-                      "statSettings": {
-                        "valueField": "prompt_tokens",
-                        "valueAggregation": "None",
-                        "colorSettings": {
-                          "type": "static",
-                          "mode": "background",
-                          "staticColor": "gray",
-                          "heatmapPalette": "greenRed",
-                          "thresholdsGrid": []
-                        },
-                        "iconSettings": {
-                          "thresholdsGrid": []
-                        },
-                        "tagText": "Promtp Tokens",
-                        "valueFontStyle": "xxLarge"
-                      },
-                      "mapSettings": {
-                        "locInfo": "LatLong",
-                        "sizeSettings": "prompt_tokens",
-                        "sizeAggregation": "Sum",
-                        "legendMetric": "prompt_tokens",
-                        "legendAggregation": "Sum",
-                        "itemColorSettings": {
-                          "type": "heatmap",
-                          "colorAggregation": "Sum",
-                          "nodeColorField": "prompt_tokens",
-                          "heatmapPalette": "greenRed"
-                        }
-                      }
-                    },
-                    "customWidth": "33",
-                    "name": "query - 10 - Copy",
-                    "styleSettings": {
-                      "showBorder": true
-                    }
-                  },
-                  {
-                    "type": 3,
-                    "content": {
-                      "version": "KqlItem/1.0",
-                      "query": "traces\r\n| where customDimensions.[\"code.function\"] ==\"log_chat_completion\"\r\n| extend parsedMessage = parse_json(message)\r\n| project\r\n    prompt_tokens = toint(parsedMessage.prompt_tokens),\r\n    completion_tokens = toint(parsedMessage.completion_tokens),\r\n    total_tokens = toint(parsedMessage.total_tokens)\r\n| summarize\r\n    prompt_tokens = sum(prompt_tokens),\r\n    completion_tokens = sum(completion_tokens),\r\n    total_tokens = sum(total_tokens)",
-                      "size": 1,
-                      "timeContextFromParameter": "Duration",
-                      "queryType": 0,
-                      "resourceType": "microsoft.insights/components",
-                      "visualization": "stat",
-                      "tileSettings": {
-                        "titleContent": {
-                          "columnMatch": "total_tokens",
-                          "formatter": 1
-                        },
-                        "leftContent": {
-                          "columnMatch": "prompt_tokens",
-                          "formatter": 1
-                        },
-                        "rightContent": {
-                          "columnMatch": "completion_tokens",
-                          "formatter": 1
-                        },
-                        "showBorder": false
-                      },
-                      "statSettings": {
-                        "valueField": "completion_tokens",
-                        "valueAggregation": "None",
-                        "colorSettings": {
-                          "type": "static",
-                          "mode": "background",
-                          "staticColor": "gray",
-                          "heatmapPalette": "greenRed",
-                          "thresholdsGrid": []
-                        },
-                        "iconSettings": {
-                          "thresholdsGrid": []
-                        },
-                        "tagText": "Completion Tokens",
-                        "valueFontStyle": "xxLarge"
-                      },
-                      "mapSettings": {
-                        "locInfo": "LatLong",
-                        "sizeSettings": "prompt_tokens",
-                        "sizeAggregation": "Sum",
-                        "legendMetric": "prompt_tokens",
-                        "legendAggregation": "Sum",
-                        "itemColorSettings": {
-                          "type": "heatmap",
-                          "colorAggregation": "Sum",
-                          "nodeColorField": "prompt_tokens",
-                          "heatmapPalette": "greenRed"
-                        }
-                      }
-                    },
-                    "customWidth": "33",
-                    "name": "query - 10 - Copy - Copy",
-                    "styleSettings": {
-                      "showBorder": true
-                    }
-                  },
-                  {
-                    "type": 3,
-                    "content": {
-                      "version": "KqlItem/1.0",
-                      "query": "traces\r\n| where customDimensions.[\"code.function\"] ==\"log_chat_completion\"\r\n| extend parsedMessage = parse_json(message)\r\n| summarize total_cost = strcat(\"$\",tostring(round(sum(todouble(parsedMessage.cost)), 3)))",
-                      "size": 1,
-                      "timeContextFromParameter": "Duration",
-                      "queryType": 0,
-                      "resourceType": "microsoft.insights/components",
-                      "visualization": "stat",
-                      "tileSettings": {
-                        "titleContent": {
-                          "columnMatch": "total_tokens",
-                          "formatter": 1
-                        },
-                        "leftContent": {
-                          "columnMatch": "prompt_tokens",
-                          "formatter": 1
-                        },
-                        "rightContent": {
-                          "columnMatch": "completion_tokens",
-                          "formatter": 1
-                        },
-                        "showBorder": false
-                      },
-                      "statSettings": {
-                        "valueField": "total_cost",
-                        "valueAggregation": "None",
-                        "colorSettings": {
-                          "type": "static",
-                          "mode": "background",
-                          "staticColor": "orange",
-                          "heatmapPalette": "greenRed",
-                          "thresholdsGrid": []
-                        },
-                        "iconSettings": {
-                          "thresholdsGrid": []
-                        },
-                        "tagText": "Cost",
-                        "valueFontStyle": "xxLarge"
-                      },
-                      "mapSettings": {
-                        "locInfo": "LatLong",
-                        "sizeSettings": "prompt_tokens",
-                        "sizeAggregation": "Sum",
-                        "legendMetric": "prompt_tokens",
-                        "legendAggregation": "Sum",
-                        "itemColorSettings": {
-                          "type": "heatmap",
-                          "colorAggregation": "Sum",
-                          "nodeColorField": "prompt_tokens",
-                          "heatmapPalette": "greenRed"
-                        }
-                      }
-                    },
-                    "customWidth": "33",
-                    "name": "query - 10 - Copy - Copy - Copy",
-                    "styleSettings": {
-                      "showBorder": true
-                    }
-                  }
-                ]
-              },
-              "name": "tile_group_overview"
-            },
-            {
-              "type": 1,
-              "content": {
-                "json": "## Total Cost($) and Duration(ms) by workflow Sessions"
-              },
-              "name": "text - 0"
-            },
-            {
-              "type": 3,
-              "content": {
-                "version": "KqlItem/1.0",
-                "query": "traces\r\n| where customDimensions[\"code.function\"] == \"log_chat_completion\"\r\n| extend parsedMessage = parse_json(message)\r\n| project\r\n    session_id = tostring(parsedMessage.thread_id),\r\n    timestamp,\r\n    invocation_id = tostring(parsedMessage.invocation_id),\r\n    source_name = tostring(parsedMessage.source_name),\r\n    cost = todouble(parsedMessage.cost),  // Convert cost to a numeric value if it’s stored as a string\r\n    duration_ms = datetime_diff('millisecond', todatetime(parsedMessage.end_time), todatetime(parsedMessage.start_time)),\r\n    startTimeRaw = todatetime(parsedMessage.start_time),\r\n    endTimeRaw = todatetime(parsedMessage.end_time)\r\n| summarize \r\n    cost = round(sum(cost),5),     \r\n    startTime = min(startTimeRaw), \r\n    endTime = max(endTimeRaw) \r\nby session_id\r\n| project \r\n    session_id,\r\n    cost,    \r\n    session_duration_ms = datetime_diff('millisecond', endTime, startTime),\r\n    startTime,\r\n    endTime\r\n",
-                "size": 0,
-                "timeContextFromParameter": "Duration",
-                "queryType": 0,
-                "resourceType": "microsoft.insights/components"
-              },
-              "name": "query - 1",
-              "styleSettings": {
-                "showBorder": true
-              }
-            },
-            {
-              "type": 1,
-              "content": {
-                "json": "## Average Cost($) and Duration(ms) by Agent"
-              },
-              "name": "text - 2"
-            },
-            {
-              "type": 3,
-              "content": {
-                "version": "KqlItem/1.0",
-                "query": "traces\r\n| where customDimensions[\"code.function\"] == \"log_chat_completion\"  \r\n| extend parsedMessage = parse_json(message)\r\n| project\r\n    timestamp,\r\n    invocation_id = tostring(parsedMessage.invocation_id),\r\n    agent_name = tostring(parsedMessage.source_name),\r\n    cost = todecimal(parsedMessage.cost),\r\n    duration_ms = datetime_diff('millisecond', todatetime(parsedMessage.end_time), todatetime(parsedMessage.start_time)),\r\n    startTimeRaw = todatetime(parsedMessage.start_time),\r\n    endTimeRaw = todatetime(parsedMessage.end_time)\r\n| summarize avg_cost = round(avg(cost),5), avg_duration_ms = round(avg(duration_ms),0) by agent_name\r\n",
-                "size": 0,
-                "timeContextFromParameter": "Duration",
-                "queryType": 0,
-                "resourceType": "microsoft.insights/components"
-              },
-              "name": "query - 3",
-              "styleSettings": {
-                "showBorder": true
-              }
-            }
-          ]
-        },
-        "conditionalVisibility": {
-          "parameterName": "page",
-          "comparison": "isEqualTo",
-          "value": "overview"
-        },
-        "name": "overview"
-      },
-      {
-        "type": 12,
-        "content": {
-          "version": "NotebookGroup/1.0",
-          "groupType": "editable",
-          "items": [
-            {
-              "type": 9,
-              "content": {
-                "version": "KqlParameterItem/1.0",
-                "parameters": [
-                  {
-                    "id": "11d6d102-9cfc-4fa8-8e95-41ab2c465e5f",
-                    "version": "KqlParameterItem/1.0",
-                    "name": "session",
-                    "label": "Session",
-                    "type": 2,
-                    "query": "dependencies\r\n| where target == \"workflow_run\"\r\n| project operation_Id\r\n",
-                    "typeSettings": {
-                      "additionalResourceOptions": [],
-                      "showDefault": false
-                    },
-                    "timeContext": {
-                      "durationMs": 0
-                    },
+      "name": "links - 5"
+    },
+    {
+      "type": 12,
+      "content": {
+        "version": "NotebookGroup/1.0",
+        "groupType": "editable",
+        "items": [
+          {
+            "type": 12,
+            "content": {
+              "version": "NotebookGroup/1.0",
+              "groupType": "editable",
+              "items": [
+                {
+                  "type": 3,
+                  "content": {
+                    "version": "KqlItem/1.0",
+                    "query": "traces\r\n| where customDimensions.[\"code.function\"] ==\"log_chat_completion\"\r\n| extend parsedMessage = parse_json(message)\r\n| project\r\n    prompt_tokens = toint(parsedMessage.prompt_tokens),\r\n    completion_tokens = toint(parsedMessage.completion_tokens),\r\n    total_tokens = toint(parsedMessage.total_tokens)\r\n| summarize\r\n    prompt_tokens = sum(prompt_tokens),\r\n    completion_tokens = sum(completion_tokens),\r\n    total_tokens = sum(total_tokens)",
+                    "size": 1,
                     "timeContextFromParameter": "Duration",
                     "queryType": 0,
                     "resourceType": "microsoft.insights/components",
-                    "value": "38de51685c29e94f588eb4b0b64a26e6"
-                  }
-                ],
-                "style": "pills",
-                "queryType": 0,
-                "resourceType": "microsoft.insights/components"
-              },
-              "name": "parameters - 0"
-            },
-            {
-              "type": 1,
-              "content": {
-                "json": "## Autogen Workflow Sessions"
-              },
-              "name": "text - 1"
-            },
-            {
-              "type": 3,
-              "content": {
-                "version": "KqlItem/1.0",
-                "query": "dependencies\r\n| where target == \"workflow_run\"\r\n| project session_Id= operation_Id, transactionview= itemId, workflow_id=customDimensions[\"workflow_id\"], timestamp, duration,success, performanceBucket,operation_Id,operation_ParentId, customDimensions",
-                "size": 0,
-                "timeContextFromParameter": "Duration",
-                "queryType": 0,
-                "resourceType": "microsoft.insights/components",
-                "gridSettings": {
-                  "formatters": [
-                    {
-                      "columnMatch": "transactionview",
-                      "formatter": 7,
-                      "formatOptions": {
-                        "linkTarget": "DependencyDetails"
-                      }
+                    "visualization": "stat",
+                    "tileSettings": {
+                      "titleContent": {
+                        "columnMatch": "total_tokens",
+                        "formatter": 1
+                      },
+                      "leftContent": {
+                        "columnMatch": "prompt_tokens",
+                        "formatter": 1
+                      },
+                      "rightContent": {
+                        "columnMatch": "completion_tokens",
+                        "formatter": 1
+                      },
+                      "showBorder": false
                     },
-                    {
-                      "columnMatch": "performanceBucket",
-                      "formatter": 4,
-                      "formatOptions": {
-                        "palette": "greenRed"
+                    "statSettings": {
+                      "valueField": "prompt_tokens",
+                      "valueAggregation": "None",
+                      "colorSettings": {
+                        "type": "static",
+                        "mode": "background",
+                        "staticColor": "gray",
+                        "heatmapPalette": "greenRed",
+                        "thresholdsGrid": []
+                      },
+                      "iconSettings": {
+                        "thresholdsGrid": []
+                      },
+                      "tagText": "Promtp Tokens",
+                      "valueFontStyle": "xxLarge"
+                    },
+                    "mapSettings": {
+                      "locInfo": "LatLong",
+                      "sizeSettings": "prompt_tokens",
+                      "sizeAggregation": "Sum",
+                      "legendMetric": "prompt_tokens",
+                      "legendAggregation": "Sum",
+                      "itemColorSettings": {
+                        "type": "heatmap",
+                        "colorAggregation": "Sum",
+                        "nodeColorField": "prompt_tokens",
+                        "heatmapPalette": "greenRed"
                       }
                     }
-                  ],
-                  "sortBy": [
-                    {
-                      "itemKey": "session_Id",
-                      "sortOrder": 1
-                    }
-                  ]
+                  },
+                  "customWidth": "33",
+                  "name": "query - 10 - Copy",
+                  "styleSettings": {
+                    "showBorder": true
+                  }
                 },
+                {
+                  "type": 3,
+                  "content": {
+                    "version": "KqlItem/1.0",
+                    "query": "traces\r\n| where customDimensions.[\"code.function\"] ==\"log_chat_completion\"\r\n| extend parsedMessage = parse_json(message)\r\n| project\r\n    prompt_tokens = toint(parsedMessage.prompt_tokens),\r\n    completion_tokens = toint(parsedMessage.completion_tokens),\r\n    total_tokens = toint(parsedMessage.total_tokens)\r\n| summarize\r\n    prompt_tokens = sum(prompt_tokens),\r\n    completion_tokens = sum(completion_tokens),\r\n    total_tokens = sum(total_tokens)",
+                    "size": 1,
+                    "timeContextFromParameter": "Duration",
+                    "queryType": 0,
+                    "resourceType": "microsoft.insights/components",
+                    "visualization": "stat",
+                    "tileSettings": {
+                      "titleContent": {
+                        "columnMatch": "total_tokens",
+                        "formatter": 1
+                      },
+                      "leftContent": {
+                        "columnMatch": "prompt_tokens",
+                        "formatter": 1
+                      },
+                      "rightContent": {
+                        "columnMatch": "completion_tokens",
+                        "formatter": 1
+                      },
+                      "showBorder": false
+                    },
+                    "statSettings": {
+                      "valueField": "completion_tokens",
+                      "valueAggregation": "None",
+                      "colorSettings": {
+                        "type": "static",
+                        "mode": "background",
+                        "staticColor": "gray",
+                        "heatmapPalette": "greenRed",
+                        "thresholdsGrid": []
+                      },
+                      "iconSettings": {
+                        "thresholdsGrid": []
+                      },
+                      "tagText": "Completion Tokens",
+                      "valueFontStyle": "xxLarge"
+                    },
+                    "mapSettings": {
+                      "locInfo": "LatLong",
+                      "sizeSettings": "prompt_tokens",
+                      "sizeAggregation": "Sum",
+                      "legendMetric": "prompt_tokens",
+                      "legendAggregation": "Sum",
+                      "itemColorSettings": {
+                        "type": "heatmap",
+                        "colorAggregation": "Sum",
+                        "nodeColorField": "prompt_tokens",
+                        "heatmapPalette": "greenRed"
+                      }
+                    }
+                  },
+                  "customWidth": "33",
+                  "name": "query - 10 - Copy - Copy",
+                  "styleSettings": {
+                    "showBorder": true
+                  }
+                },
+                {
+                  "type": 3,
+                  "content": {
+                    "version": "KqlItem/1.0",
+                    "query": "traces\r\n| where customDimensions.[\"code.function\"] ==\"log_chat_completion\"\r\n| extend parsedMessage = parse_json(message)\r\n| summarize total_cost = strcat(\"$\",tostring(round(sum(todouble(parsedMessage.cost)), 3)))",
+                    "size": 1,
+                    "timeContextFromParameter": "Duration",
+                    "queryType": 0,
+                    "resourceType": "microsoft.insights/components",
+                    "visualization": "stat",
+                    "tileSettings": {
+                      "titleContent": {
+                        "columnMatch": "total_tokens",
+                        "formatter": 1
+                      },
+                      "leftContent": {
+                        "columnMatch": "prompt_tokens",
+                        "formatter": 1
+                      },
+                      "rightContent": {
+                        "columnMatch": "completion_tokens",
+                        "formatter": 1
+                      },
+                      "showBorder": false
+                    },
+                    "statSettings": {
+                      "valueField": "total_cost",
+                      "valueAggregation": "None",
+                      "colorSettings": {
+                        "type": "static",
+                        "mode": "background",
+                        "staticColor": "orange",
+                        "heatmapPalette": "greenRed",
+                        "thresholdsGrid": []
+                      },
+                      "iconSettings": {
+                        "thresholdsGrid": []
+                      },
+                      "tagText": "Cost",
+                      "valueFontStyle": "xxLarge"
+                    },
+                    "mapSettings": {
+                      "locInfo": "LatLong",
+                      "sizeSettings": "prompt_tokens",
+                      "sizeAggregation": "Sum",
+                      "legendMetric": "prompt_tokens",
+                      "legendAggregation": "Sum",
+                      "itemColorSettings": {
+                        "type": "heatmap",
+                        "colorAggregation": "Sum",
+                        "nodeColorField": "prompt_tokens",
+                        "heatmapPalette": "greenRed"
+                      }
+                    }
+                  },
+                  "customWidth": "33",
+                  "name": "query - 10 - Copy - Copy - Copy",
+                  "styleSettings": {
+                    "showBorder": true
+                  }
+                }
+              ]
+            },
+            "name": "tile_group_overview"
+          },
+          {
+            "type": 1,
+            "content": {
+              "json": "## Total Cost($) and Duration(ms) by workflow Sessions"
+            },
+            "name": "text - 0"
+          },
+          {
+            "type": 3,
+            "content": {
+              "version": "KqlItem/1.0",
+              "query": "traces\r\n| where customDimensions[\"code.function\"] == \"log_chat_completion\"\r\n| extend parsedMessage = parse_json(message)\r\n| project\r\n    session_id = operation_Id,\r\n    timestamp,\r\n    invocation_id = tostring(parsedMessage.invocation_id),\r\n    source_name = tostring(parsedMessage.source_name),\r\n    cost = todouble(parsedMessage.cost),  // Convert cost to a numeric value if it’s stored as a string\r\n    duration_ms = datetime_diff('millisecond', todatetime(parsedMessage.end_time), todatetime(parsedMessage.start_time)),\r\n    startTimeRaw = todatetime(parsedMessage.start_time),\r\n    endTimeRaw = todatetime(parsedMessage.end_time)\r\n| summarize \r\n    cost = round(sum(cost),5),     \r\n    startTime = min(startTimeRaw), \r\n    endTime = max(endTimeRaw) \r\nby session_id\r\n| project \r\n    session_id,\r\n    cost,    \r\n    session_duration_ms = datetime_diff('millisecond', endTime, startTime),\r\n    startTime,\r\n    endTime\r\n",
+              "size": 0,
+              "timeContextFromParameter": "Duration",
+              "queryType": 0,
+              "resourceType": "microsoft.insights/components",
+              "visualization": "table"
+            },
+            "name": "query - 1",
+            "styleSettings": {
+              "showBorder": true
+            }
+          },
+          {
+            "type": 1,
+            "content": {
+              "json": "## Average Cost($) and Duration(ms) by Agent"
+            },
+            "name": "text - 2"
+          },
+          {
+            "type": 3,
+            "content": {
+              "version": "KqlItem/1.0",
+              "query": "traces\r\n| where customDimensions[\"code.function\"] == \"log_chat_completion\"  \r\n| extend parsedMessage = parse_json(message)\r\n| project\r\n    timestamp,\r\n    invocation_id = tostring(parsedMessage.invocation_id),\r\n    agent_name = tostring(parsedMessage.source_name),\r\n    cost = todecimal(parsedMessage.cost),\r\n    duration_ms = datetime_diff('millisecond', todatetime(parsedMessage.end_time), todatetime(parsedMessage.start_time)),\r\n    startTimeRaw = todatetime(parsedMessage.start_time),\r\n    endTimeRaw = todatetime(parsedMessage.end_time)\r\n| summarize avg_cost = round(avg(cost),5), avg_duration_ms = round(avg(duration_ms),0) by agent_name\r\n",
+              "size": 0,
+              "timeContextFromParameter": "Duration",
+              "queryType": 0,
+              "resourceType": "microsoft.insights/components",
+              "gridSettings": {
                 "sortBy": [
                   {
-                    "itemKey": "session_Id",
+                    "itemKey": "avg_cost",
                     "sortOrder": 1
                   }
                 ]
               },
-              "name": "query - 2",
-              "styleSettings": {
-                "showBorder": true
-              }
+              "sortBy": [
+                {
+                  "itemKey": "avg_cost",
+                  "sortOrder": 1
+                }
+              ]
             },
-            {
-              "type": 12,
-              "content": {
-                "version": "NotebookGroup/1.0",
-                "groupType": "editable",
-                "items": [
+            "name": "query - 3",
+            "styleSettings": {
+              "showBorder": true
+            }
+          }
+        ]
+      },
+      "conditionalVisibility": {
+        "parameterName": "page",
+        "comparison": "isEqualTo",
+        "value": "overview"
+      },
+      "name": "overview"
+    },
+    {
+      "type": 12,
+      "content": {
+        "version": "NotebookGroup/1.0",
+        "groupType": "editable",
+        "items": [
+          {
+            "type": 9,
+            "content": {
+              "version": "KqlParameterItem/1.0",
+              "parameters": [
+                {
+                  "id": "11d6d102-9cfc-4fa8-8e95-41ab2c465e5f",
+                  "version": "KqlParameterItem/1.0",
+                  "name": "session",
+                  "label": "Session",
+                  "type": 2,
+                  "query": "dependencies\r\n| where target == \"workflow_run\"\r\n| order by timestamp desc\r\n| project operation_Id",
+                  "typeSettings": {
+                    "additionalResourceOptions": [],
+                    "showDefault": false
+                  },
+                  "timeContext": {
+                    "durationMs": 0
+                  },
+                  "timeContextFromParameter": "Duration",
+                  "queryType": 0,
+                  "resourceType": "microsoft.insights/components",
+                  "value": "d42b539378d0c1dbd72b504414460d56"
+                }
+              ],
+              "style": "pills",
+              "queryType": 0,
+              "resourceType": "microsoft.insights/components"
+            },
+            "name": "parameters - 0"
+          },
+          {
+            "type": 1,
+            "content": {
+              "json": "## Autogen Workflow Sessions"
+            },
+            "name": "text - 1"
+          },
+          {
+            "type": 3,
+            "content": {
+              "version": "KqlItem/1.0",
+              "query": "dependencies\r\n| where target == \"workflow_run\"\r\n| order by timestamp desc\r\n| project session_Id= operation_Id, transactionview= itemId, workflow_id=customDimensions[\"workflow_id\"], timestamp, duration,success, performanceBucket,operation_Id,operation_ParentId, customDimensions",
+              "size": 0,
+              "timeContextFromParameter": "Duration",
+              "queryType": 0,
+              "resourceType": "microsoft.insights/components",
+              "gridSettings": {
+                "formatters": [
                   {
-                    "type": 3,
-                    "content": {
-                      "version": "KqlItem/1.0",
-                      "query": "traces\r\n| where customDimensions.[\"code.function\"] ==\"log_chat_completion\" and operation_Id == \"{session}\" \r\n| extend parsedMessage = parse_json(message)\r\n| project\r\n    prompt_tokens = toint(parsedMessage.prompt_tokens),\r\n    completion_tokens = toint(parsedMessage.completion_tokens),\r\n    total_tokens = toint(parsedMessage.total_tokens)\r\n| summarize\r\n    prompt_tokens = sum(prompt_tokens),\r\n    completion_tokens = sum(completion_tokens),\r\n    total_tokens = sum(total_tokens)",
-                      "size": 1,
-                      "timeContextFromParameter": "Duration",
-                      "queryType": 0,
-                      "resourceType": "microsoft.insights/components",
-                      "visualization": "stat",
-                      "tileSettings": {
-                        "titleContent": {
-                          "columnMatch": "total_tokens",
-                          "formatter": 1
-                        },
-                        "leftContent": {
-                          "columnMatch": "prompt_tokens",
-                          "formatter": 1
-                        },
-                        "rightContent": {
-                          "columnMatch": "completion_tokens",
-                          "formatter": 1
-                        },
-                        "showBorder": false
-                      },
-                      "statSettings": {
-                        "valueField": "prompt_tokens",
-                        "valueAggregation": "None",
-                        "colorSettings": {
-                          "type": "static",
-                          "mode": "background",
-                          "staticColor": "gray",
-                          "heatmapPalette": "greenRed",
-                          "thresholdsGrid": []
-                        },
-                        "iconSettings": {
-                          "thresholdsGrid": []
-                        },
-                        "tagText": "Promtp Tokens",
-                        "valueFontStyle": "xxLarge"
-                      },
-                      "mapSettings": {
-                        "locInfo": "LatLong",
-                        "sizeSettings": "prompt_tokens",
-                        "sizeAggregation": "Sum",
-                        "legendMetric": "prompt_tokens",
-                        "legendAggregation": "Sum",
-                        "itemColorSettings": {
-                          "type": "heatmap",
-                          "colorAggregation": "Sum",
-                          "nodeColorField": "prompt_tokens",
-                          "heatmapPalette": "greenRed"
-                        }
-                      }
-                    },
-                    "customWidth": "33",
-                    "name": "query - 10 - Copy",
-                    "styleSettings": {
-                      "showBorder": true
+                    "columnMatch": "transactionview",
+                    "formatter": 7,
+                    "formatOptions": {
+                      "linkTarget": "DependencyDetails"
                     }
                   },
                   {
-                    "type": 3,
-                    "content": {
-                      "version": "KqlItem/1.0",
-                      "query": "traces\r\n| where customDimensions.[\"code.function\"] ==\"log_chat_completion\" and operation_Id == \"{session}\"\r\n| extend parsedMessage = parse_json(message)\r\n| project\r\n    prompt_tokens = toint(parsedMessage.prompt_tokens),\r\n    completion_tokens = toint(parsedMessage.completion_tokens),\r\n    total_tokens = toint(parsedMessage.total_tokens)\r\n| summarize\r\n    prompt_tokens = sum(prompt_tokens),\r\n    completion_tokens = sum(completion_tokens),\r\n    total_tokens = sum(total_tokens)",
-                      "size": 1,
-                      "timeContextFromParameter": "Duration",
-                      "queryType": 0,
-                      "resourceType": "microsoft.insights/components",
-                      "visualization": "stat",
-                      "tileSettings": {
-                        "titleContent": {
-                          "columnMatch": "total_tokens",
-                          "formatter": 1
-                        },
-                        "leftContent": {
-                          "columnMatch": "prompt_tokens",
-                          "formatter": 1
-                        },
-                        "rightContent": {
-                          "columnMatch": "completion_tokens",
-                          "formatter": 1
-                        },
-                        "showBorder": false
-                      },
-                      "statSettings": {
-                        "valueField": "completion_tokens",
-                        "valueAggregation": "None",
-                        "colorSettings": {
-                          "type": "static",
-                          "mode": "background",
-                          "staticColor": "gray",
-                          "heatmapPalette": "greenRed",
-                          "thresholdsGrid": []
-                        },
-                        "iconSettings": {
-                          "thresholdsGrid": []
-                        },
-                        "tagText": "Completion Tokens",
-                        "valueFontStyle": "xxLarge"
-                      },
-                      "mapSettings": {
-                        "locInfo": "LatLong",
-                        "sizeSettings": "prompt_tokens",
-                        "sizeAggregation": "Sum",
-                        "legendMetric": "prompt_tokens",
-                        "legendAggregation": "Sum",
-                        "itemColorSettings": {
-                          "type": "heatmap",
-                          "colorAggregation": "Sum",
-                          "nodeColorField": "prompt_tokens",
-                          "heatmapPalette": "greenRed"
-                        }
-                      }
-                    },
-                    "customWidth": "33",
-                    "name": "query - 10 - Copy - Copy",
-                    "styleSettings": {
-                      "showBorder": true
+                    "columnMatch": "performanceBucket",
+                    "formatter": 4,
+                    "formatOptions": {
+                      "palette": "greenRed"
                     }
-                  },
+                  }
+                ],
+                "sortBy": [
                   {
-                    "type": 3,
-                    "content": {
-                      "version": "KqlItem/1.0",
-                      "query": "traces\r\n| where customDimensions.[\"code.function\"] ==\"log_chat_completion\" and operation_Id == \"{session}\"\r\n| extend parsedMessage = parse_json(message)\r\n| summarize total_cost = strcat(\"$\",tostring(round(sum(todouble(parsedMessage.cost)), 3)))",
-                      "size": 1,
-                      "timeContext": {
-                        "durationMs": 86400000
-                      },
-                      "queryType": 0,
-                      "resourceType": "microsoft.insights/components",
-                      "visualization": "stat",
-                      "tileSettings": {
-                        "titleContent": {
-                          "columnMatch": "total_tokens",
-                          "formatter": 1
-                        },
-                        "leftContent": {
-                          "columnMatch": "prompt_tokens",
-                          "formatter": 1
-                        },
-                        "rightContent": {
-                          "columnMatch": "completion_tokens",
-                          "formatter": 1
-                        },
-                        "showBorder": false
-                      },
-                      "statSettings": {
-                        "valueField": "total_cost",
-                        "valueAggregation": "None",
-                        "colorSettings": {
-                          "type": "static",
-                          "mode": "background",
-                          "staticColor": "orange",
-                          "heatmapPalette": "greenRed",
-                          "thresholdsGrid": []
-                        },
-                        "iconSettings": {
-                          "thresholdsGrid": []
-                        },
-                        "tagText": "Cost",
-                        "valueFontStyle": "xxLarge"
-                      },
-                      "mapSettings": {
-                        "locInfo": "LatLong",
-                        "sizeSettings": "prompt_tokens",
-                        "sizeAggregation": "Sum",
-                        "legendMetric": "prompt_tokens",
-                        "legendAggregation": "Sum",
-                        "itemColorSettings": {
-                          "type": "heatmap",
-                          "colorAggregation": "Sum",
-                          "nodeColorField": "prompt_tokens",
-                          "heatmapPalette": "greenRed"
-                        }
-                      }
-                    },
-                    "customWidth": "33",
-                    "name": "query - 10 - Copy - Copy - Copy",
-                    "styleSettings": {
-                      "showBorder": true
-                    }
+                    "itemKey": "$gen_bar_performanceBucket_6",
+                    "sortOrder": 1
                   }
                 ]
               },
-              "name": "tile_group"
+              "sortBy": [
+                {
+                  "itemKey": "$gen_bar_performanceBucket_6",
+                  "sortOrder": 1
+                }
+              ]
             },
-            {
-              "type": 1,
-              "content": {
-                "json": "## Cost($) and Duration(ms) by Agent"
-              },
-              "name": "text - 5"
-            },
-            {
-              "type": 3,
-              "content": {
-                "version": "KqlItem/1.0",
-                "query": "traces\r\n| where customDimensions[\"code.function\"] == \"log_chat_completion\"  and operation_Id == \"{session}\"\r\n| extend parsedMessage = parse_json(message)\r\n| project\r\n    timestamp,\r\n    invocation_id = tostring(parsedMessage.invocation_id),\r\n    agent_name = tostring(parsedMessage.source_name),\r\n    cost = todecimal(parsedMessage.cost),\r\n    duration_ms = datetime_diff('millisecond', todatetime(parsedMessage.end_time), todatetime(parsedMessage.start_time)),\r\n    startTimeRaw = todatetime(parsedMessage.start_time),\r\n    endTimeRaw = todatetime(parsedMessage.end_time)\r\n| summarize cost = round(sum(cost),5), duration_ms = round(sum(duration_ms),0) by agent_name\r\n\r\n\r\n",
-                "size": 4,
-                "queryType": 0,
-                "resourceType": "microsoft.insights/components"
-              },
-              "name": "query - 6"
-            },
-            {
-              "type": 1,
-              "content": {
-                "json": "## Sessions Conversation Flow"
-              },
-              "name": "text - 3"
-            },
-            {
-              "type": 3,
-              "content": {
-                "version": "KqlItem/1.0",
-                "query": "dependencies\r\n| where target == \"workflow_run\" and operation_Id == \"{session}\"\r\n| extend ParsedData = parse_json(tostring(parse_json(tostring(customDimensions.messages)).messages))  // Parse the JSON string\r\n| mv-expand Item = ParsedData\r\n| project timestamp = tostring(Item.timestamp),\r\nmessage_type = tostring(Item.message_type),\r\nsender = tostring(Item.sender),\r\nrecipient = tostring(Item.recipient),\r\nperformanceBucket,\r\nmessage = tostring(Item.message.content)",
-                "size": 0,
-                "timeContext": {
-                  "durationMs": 86400000
-                },
-                "queryType": 0,
-                "resourceType": "microsoft.insights/components"
-              },
-              "name": "query - 4"
-            },
-            {
-              "type": 1,
-              "content": {
-                "json": "## Event Type"
-              },
-              "name": "text - 7"
-            },
-            {
-              "type": 3,
-              "content": {
-                "version": "KqlItem/1.0",
-                "query": "traces\r\n| where operation_Id == \"{session}\"\r\n| summarize event_count = count() by tostring( replace(@\"^log_\", \"\", tostring(customDimensions[\"code.function\"])))\r\n",
-                "size": 0,
-                "timeContextFromParameter": "Duration",
-                "queryType": 0,
-                "resourceType": "microsoft.insights/components",
-                "visualization": "barchart"
-              },
-              "name": "query - 8"
+            "name": "query - 2",
+            "styleSettings": {
+              "showBorder": true
             }
-          ]
-        },
-        "conditionalVisibility": {
-          "parameterName": "page",
-          "comparison": "isEqualTo",
-          "value": "session"
-        },
-        "name": "session-drill",
-        "styleSettings": {
-          "showBorder": true
-        }
+          },
+          {
+            "type": 12,
+            "content": {
+              "version": "NotebookGroup/1.0",
+              "groupType": "editable",
+              "items": [
+                {
+                  "type": 3,
+                  "content": {
+                    "version": "KqlItem/1.0",
+                    "query": "traces\r\n| where customDimensions.[\"code.function\"] ==\"log_chat_completion\" and operation_Id == \"{session}\" \r\n| extend parsedMessage = parse_json(message)\r\n| project\r\n    prompt_tokens = toint(parsedMessage.prompt_tokens),\r\n    completion_tokens = toint(parsedMessage.completion_tokens),\r\n    total_tokens = toint(parsedMessage.total_tokens)\r\n| summarize\r\n    prompt_tokens = sum(prompt_tokens),\r\n    completion_tokens = sum(completion_tokens),\r\n    total_tokens = sum(total_tokens)",
+                    "size": 1,
+                    "timeContextFromParameter": "Duration",
+                    "queryType": 0,
+                    "resourceType": "microsoft.insights/components",
+                    "visualization": "stat",
+                    "tileSettings": {
+                      "titleContent": {
+                        "columnMatch": "total_tokens",
+                        "formatter": 1
+                      },
+                      "leftContent": {
+                        "columnMatch": "prompt_tokens",
+                        "formatter": 1
+                      },
+                      "rightContent": {
+                        "columnMatch": "completion_tokens",
+                        "formatter": 1
+                      },
+                      "showBorder": false
+                    },
+                    "statSettings": {
+                      "valueField": "prompt_tokens",
+                      "valueAggregation": "None",
+                      "colorSettings": {
+                        "type": "static",
+                        "mode": "background",
+                        "staticColor": "gray",
+                        "heatmapPalette": "greenRed",
+                        "thresholdsGrid": []
+                      },
+                      "iconSettings": {
+                        "thresholdsGrid": []
+                      },
+                      "tagText": "Promtp Tokens",
+                      "valueFontStyle": "xxLarge"
+                    },
+                    "mapSettings": {
+                      "locInfo": "LatLong",
+                      "sizeSettings": "prompt_tokens",
+                      "sizeAggregation": "Sum",
+                      "legendMetric": "prompt_tokens",
+                      "legendAggregation": "Sum",
+                      "itemColorSettings": {
+                        "type": "heatmap",
+                        "colorAggregation": "Sum",
+                        "nodeColorField": "prompt_tokens",
+                        "heatmapPalette": "greenRed"
+                      }
+                    }
+                  },
+                  "customWidth": "33",
+                  "name": "query - 10 - Copy",
+                  "styleSettings": {
+                    "showBorder": true
+                  }
+                },
+                {
+                  "type": 3,
+                  "content": {
+                    "version": "KqlItem/1.0",
+                    "query": "traces\r\n| where customDimensions.[\"code.function\"] ==\"log_chat_completion\" and operation_Id == \"{session}\"\r\n| extend parsedMessage = parse_json(message)\r\n| project\r\n    prompt_tokens = toint(parsedMessage.prompt_tokens),\r\n    completion_tokens = toint(parsedMessage.completion_tokens),\r\n    total_tokens = toint(parsedMessage.total_tokens)\r\n| summarize\r\n    prompt_tokens = sum(prompt_tokens),\r\n    completion_tokens = sum(completion_tokens),\r\n    total_tokens = sum(total_tokens)",
+                    "size": 1,
+                    "timeContextFromParameter": "Duration",
+                    "queryType": 0,
+                    "resourceType": "microsoft.insights/components",
+                    "visualization": "stat",
+                    "tileSettings": {
+                      "titleContent": {
+                        "columnMatch": "total_tokens",
+                        "formatter": 1
+                      },
+                      "leftContent": {
+                        "columnMatch": "prompt_tokens",
+                        "formatter": 1
+                      },
+                      "rightContent": {
+                        "columnMatch": "completion_tokens",
+                        "formatter": 1
+                      },
+                      "showBorder": false
+                    },
+                    "statSettings": {
+                      "valueField": "completion_tokens",
+                      "valueAggregation": "None",
+                      "colorSettings": {
+                        "type": "static",
+                        "mode": "background",
+                        "staticColor": "gray",
+                        "heatmapPalette": "greenRed",
+                        "thresholdsGrid": []
+                      },
+                      "iconSettings": {
+                        "thresholdsGrid": []
+                      },
+                      "tagText": "Completion Tokens",
+                      "valueFontStyle": "xxLarge"
+                    },
+                    "mapSettings": {
+                      "locInfo": "LatLong",
+                      "sizeSettings": "prompt_tokens",
+                      "sizeAggregation": "Sum",
+                      "legendMetric": "prompt_tokens",
+                      "legendAggregation": "Sum",
+                      "itemColorSettings": {
+                        "type": "heatmap",
+                        "colorAggregation": "Sum",
+                        "nodeColorField": "prompt_tokens",
+                        "heatmapPalette": "greenRed"
+                      }
+                    }
+                  },
+                  "customWidth": "33",
+                  "name": "query - 10 - Copy - Copy",
+                  "styleSettings": {
+                    "showBorder": true
+                  }
+                },
+                {
+                  "type": 3,
+                  "content": {
+                    "version": "KqlItem/1.0",
+                    "query": "traces\r\n| where customDimensions.[\"code.function\"] ==\"log_chat_completion\" and operation_Id == \"{session}\"\r\n| extend parsedMessage = parse_json(message)\r\n| summarize total_cost = strcat(\"$\",tostring(round(sum(todouble(parsedMessage.cost)), 3)))",
+                    "size": 1,
+                    "timeContext": {
+                      "durationMs": 86400000
+                    },
+                    "queryType": 0,
+                    "resourceType": "microsoft.insights/components",
+                    "visualization": "stat",
+                    "tileSettings": {
+                      "titleContent": {
+                        "columnMatch": "total_tokens",
+                        "formatter": 1
+                      },
+                      "leftContent": {
+                        "columnMatch": "prompt_tokens",
+                        "formatter": 1
+                      },
+                      "rightContent": {
+                        "columnMatch": "completion_tokens",
+                        "formatter": 1
+                      },
+                      "showBorder": false
+                    },
+                    "statSettings": {
+                      "valueField": "total_cost",
+                      "valueAggregation": "None",
+                      "colorSettings": {
+                        "type": "static",
+                        "mode": "background",
+                        "staticColor": "orange",
+                        "heatmapPalette": "greenRed",
+                        "thresholdsGrid": []
+                      },
+                      "iconSettings": {
+                        "thresholdsGrid": []
+                      },
+                      "tagText": "Cost",
+                      "valueFontStyle": "xxLarge"
+                    },
+                    "mapSettings": {
+                      "locInfo": "LatLong",
+                      "sizeSettings": "prompt_tokens",
+                      "sizeAggregation": "Sum",
+                      "legendMetric": "prompt_tokens",
+                      "legendAggregation": "Sum",
+                      "itemColorSettings": {
+                        "type": "heatmap",
+                        "colorAggregation": "Sum",
+                        "nodeColorField": "prompt_tokens",
+                        "heatmapPalette": "greenRed"
+                      }
+                    }
+                  },
+                  "customWidth": "33",
+                  "name": "query - 10 - Copy - Copy - Copy",
+                  "styleSettings": {
+                    "showBorder": true
+                  }
+                }
+              ]
+            },
+            "name": "tile_group"
+          },
+          {
+            "type": 1,
+            "content": {
+              "json": "## Cost($) and Duration(ms) by Agent"
+            },
+            "name": "text - 5"
+          },
+          {
+            "type": 3,
+            "content": {
+              "version": "KqlItem/1.0",
+              "query": "traces\r\n| where customDimensions[\"code.function\"] == \"log_chat_completion\"  and operation_Id == \"{session}\"\r\n| extend parsedMessage = parse_json(message)\r\n| project\r\n    timestamp,\r\n    invocation_id = tostring(parsedMessage.invocation_id),\r\n    agent_name = tostring(parsedMessage.source_name),\r\n    cost = todecimal(parsedMessage.cost),\r\n    duration_ms = datetime_diff('millisecond', todatetime(parsedMessage.end_time), todatetime(parsedMessage.start_time)),\r\n    startTimeRaw = todatetime(parsedMessage.start_time),\r\n    endTimeRaw = todatetime(parsedMessage.end_time)\r\n| summarize cost = round(sum(cost),5), duration_ms = round(sum(duration_ms),0) by agent_name\r\n\r\n\r\n",
+              "size": 4,
+              "queryType": 0,
+              "resourceType": "microsoft.insights/components"
+            },
+            "name": "query - 6"
+          },
+          {
+            "type": 1,
+            "content": {
+              "json": "## Sessions Conversation Flow"
+            },
+            "name": "text - 3"
+          },
+          {
+            "type": 3,
+            "content": {
+              "version": "KqlItem/1.0",
+              "query": "dependencies\r\n| where target == \"workflow_run\" and operation_Id == \"{session}\"\r\n| extend ParsedData = parse_json(tostring(parse_json(tostring(customDimensions.messages)).messages))  // Parse the JSON string\r\n| mv-expand Item = ParsedData\r\n| project timestamp = tostring(Item.timestamp),\r\nmessage_type = tostring(Item.message_type),\r\nsender = tostring(Item.sender),\r\nsender_type =tostring(Item.sender_type),\r\nrecipient = tostring(Item.recipient),\r\nperformanceBucket,\r\nmessage = tostring(Item.message.content)",
+              "size": 0,
+              "timeContextFromParameter": "Duration",
+              "queryType": 0,
+              "resourceType": "microsoft.insights/components"
+            },
+            "name": "query - 4"
+          },
+          {
+            "type": 1,
+            "content": {
+              "json": "## Event Type"
+            },
+            "name": "text - 7"
+          },
+          {
+            "type": 3,
+            "content": {
+              "version": "KqlItem/1.0",
+              "query": "traces\r\n| where operation_Id == \"{session}\"\r\n| summarize event_count = count() by tostring( replace(@\"^log_\", \"\", tostring(customDimensions[\"code.function\"])))\r\n",
+              "size": 0,
+              "timeContextFromParameter": "Duration",
+              "queryType": 0,
+              "resourceType": "microsoft.insights/components",
+              "visualization": "barchart"
+            },
+            "name": "query - 8"
+          }
+        ]
+      },
+      "conditionalVisibility": {
+        "parameterName": "page",
+        "comparison": "isEqualTo",
+        "value": "session"
+      },
+      "name": "session-drill",
+      "styleSettings": {
+        "showBorder": true
       }
-    ],
-    "fallbackResourceIds": [],
-    "$schema": "https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json"
-  }
+    }
+  ],
+  "fallbackResourceIds": [],
+  "$schema": "https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json"
+}

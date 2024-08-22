@@ -145,7 +145,7 @@ class OtelLogger(BaseLogger):
             end_time_stamp = datetime.strptime(
                 get_current_ts(), "%Y-%m-%d %H:%M:%S.%f")
 
-            with self.tracer.start_as_current_span("llm_span", start_time=int(start_time_stamp.timestamp() * 1e9)) as current_span:
+            with self.tracer.start_as_current_span("{name}({source_name})".format(name="llm", source_name=source.name), start_time=int(start_time_stamp.timestamp() * 1e9)) as current_span:
                 current_span.set_attribute("data", log_data)
                 current_span.set_attribute("cost", cost)
                 current_span.set_attribute("source_name", source_name)
@@ -216,7 +216,7 @@ class OtelLogger(BaseLogger):
                     }
                 )
 
-                with self.tracer.start_as_current_span("event_span") as current_span:
+                with self.tracer.start_as_current_span("{name}({source_name})".format(name=name, source_name=source.name)) as current_span:
                     current_span.set_attribute("source_name", source.name)
                     current_span.set_attribute("event_name", name)
                     current_span.set_attribute("data", log_data)
